@@ -1,0 +1,28 @@
+article {
+     background-color: #e426bb;
+     padding: 10px;
+     border-radius: 5px;
+     margin: 5px;
+
+}
+
+article p {
+     color: #fff;
+     font-size: 1rem;
+}
+
+.par {
+     color: black;
+}
+
+.impar {
+     color: green;
+}
+
+div h1{
+     font-size: 3rem;
+     background-color: #e54990;
+     border-radius: 50px;
+     padding: 10px 30px;
+     margin: 10px 0;
+}
