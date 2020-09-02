@@ -5,7 +5,7 @@ export default class Basico extends Component {
      constructor(props) {
           super(props);
           this.state = {
-               name: 'Barbara',
+               name: 'Guilherme',
                igreja: this.props.teste,
           }
      }
