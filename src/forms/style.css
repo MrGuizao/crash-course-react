@@ -1,0 +1,28 @@
+form {
+     width: 65%;
+     height: auto;
+     padding: 20px 50px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: #377ef8;
+     border-radius: 8px;
+     border: #353535 1px solid;
+}
+
+form h2 {
+     text-align: center;
+     color: white;
+     margin-bottom: 20px;
+}
+
+form input,
+button {
+     width: 100%;
+     display: block;
+     border-radius: 8px;
+     padding: 10px 5px;
+     margin: 10px 0;
+     border: 1px solid #fff;
+}
