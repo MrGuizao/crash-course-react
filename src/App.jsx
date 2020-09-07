@@ -347,21 +347,50 @@ import './forms/style.css'
 // TODO APP COM BACKEND - TODO APP COM BACKEND - TODO APP COM BACKEND - TODO APP COM BACKEND - TODO APP COM BACKEND
 
 
-
-
-
-// REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
-// REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
-// REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
+// CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME
 export default class App extends Component {
-  render() {
-    return (
-      <div>
+  state = {
+    hour: new Date().getHours(),
+    minute: new Date().getMinutes(),
+    seconds: new Date().getSeconds(),
+  }
 
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        hour: new Date().getHours(),
+        minute: new Date().getMinutes(),
+        seconds: new Date().getSeconds()
+      })
+    }, 1000);
+  }
+
+  render() {
+    const { hour, minute, seconds } = this.state;
+    return (
+      <div className="time">
+        <h1>Current time: {hour}:{minute}:{seconds}</h1>
       </div>
     )
   }
 }
+// CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME - CURRENT TIME
+
+
+
+
+// REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
+// REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
+// REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+
+//       </div>
+//     )
+//   }
+// }
 // REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
 // REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
 // REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX - REDUX
